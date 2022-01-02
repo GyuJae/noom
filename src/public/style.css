@@ -1,0 +1,310 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  background-color: #212121;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #2d8cff;
+}
+#status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #2d8cff;
+  height: 20px;
+  margin-top: 20px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome {
+  margin-top: 20px;
+}
+
+#welcome form {
+  display: flex;
+  flex-direction: column;
+}
+
+#welcome input {
+  width: 350px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  font-size: 20px;
+}
+
+#welcome input:focus {
+  outline: 3.5px solid #2d8cff;
+}
+
+#welcome button {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: #2d8cff;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+#myStream {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.video_toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.video_toggle button {
+  all: unset;
+  cursor: pointer;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+#myStream select {
+  margin-bottom: 20px;
+}
+
+#call {
+  display: flex;
+  gap: 10px;
+}
+
+#chats {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  width: 310px;
+  height: 98%;
+  border-left: 2px solid #fff;
+}
+
+#chats form {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+#chats form textarea {
+  width: 99%;
+  resize: none;
+  height: 100px;
+  overflow-x: hidden;
+  border-radius: 5px;
+  outline: none;
+}
+
+#chats form textarea:focus {
+  outline: 2px solid #2d8cff;
+}
+
+#chats form button {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  background-color: #2d8cff;
+  color: #fff;
+  margin-top: 0px;
+  border-radius: 5px;
+}
+
+#chats ul {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  height: 80%;
+}
+
+#chats ul li.notMe {
+  width: 300px;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 10px;
+}
+
+#chats ul li.me {
+  width: 300px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#chats ul li .notMe {
+  width: 200px;
+  padding: 5px;
+  background-color: white;
+  color: black;
+  margin-top: 5px;
+  border-radius: 5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#chats ul li .me {
+  width: 200px;
+  padding: 5px;
+  background-color: #2d8cff;
+  color: #fff;
+  margin-top: 5px;
+  border-radius: 5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
